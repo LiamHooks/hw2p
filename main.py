@@ -4,9 +4,7 @@
 # Collaborator:
 # Section: 2
 # Breakout: 2
-
-if __name__ == "__main__":
-  def getGradePoint(letter):
+def getGradePoint(letter):
     if letter == "A":
       return 4.0
     elif letter == "A-":
@@ -25,6 +23,8 @@ if __name__ == "__main__":
       return 1.0
     else:
       return 0.0
+
+def run():
   letter1 = input("Enter your course 1 letter grade: ")
   gradePoint1 = getGradePoint(letter1)
   credit1 = float(input("Enter your course 1 credit: "))
@@ -43,3 +43,6 @@ if __name__ == "__main__":
   gpa = ((gradePoint1 * credit1) + (gradePoint2 * credit2) + (gradePoint3 * credit3)) / (credit1 + credit2 + credit3)
 
   print(f"Your GPA is: {gpa}")
+
+if __name__ == "__main__":
+  run()
